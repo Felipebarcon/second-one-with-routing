@@ -2,9 +2,13 @@
 
 <ul>
   <li *ngFor="let cli of clients">
-    {{ cli.id }} {{ cli.nom }}
-    <a href="/clients/{{ cli.id }}">Détail</a>
+    {{ cli.id }} {{ cli.nom }} <a href="/clients/{{ cli.id }}">Détail</a>&nbsp;
+    <a [routerLink]="['/clients', cli.id]">Détail V2</a>
+    <!-- Beaucoup plus
+    rapide -->
   </li>
 </ul>
 
-<button (click)="ShowFactures()">Liste des Factures</button>
+<button (click)="ShowFactures()">Liste des Factures</button><br />
+<!-- Test routes factures -->
+<a [routerLink]="['/clients/factures']">Liste des factures V2</a>

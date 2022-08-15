@@ -20,7 +20,7 @@ export class ListeClientsComponent implements OnInit {
     // window.location.assign("/factures") ou:
     // this.router.navigate(['/factures']); ou:
     this.router
-      .navigateByUrl('/factures')
+      .navigateByUrl('/factures') // beaucoup plus rapide
       .catch((e) => this.router.navigateByUrl('/'));
   }
 }
