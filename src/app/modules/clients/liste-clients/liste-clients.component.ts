@@ -22,5 +22,9 @@ export class ListeClientsComponent implements OnInit {
     this.router
       .navigateByUrl('/factures') // beaucoup plus rapide
       .catch((e) => this.router.navigateByUrl('/'));
+
+    this.router
+      .navigate(['/factures'], { queryParams: { orderby: 'date' } })
+      .catch((e) => this.router.navigateByUrl('/'));
   }
 }
