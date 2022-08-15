@@ -1,0 +1,10 @@
+<p>Liste de clients</p>
+
+<ul>
+  <li *ngFor="let cli of clients">
+    {{ cli.id }} {{ cli.nom }}
+    <a href="/clients/{{ cli.id }}">Détail</a>
+  </li>
+</ul>
+
+<button (click)="ShowFactures()">Liste des Factures</button>
