@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LandingComponent } from './pages/landing/landing.component';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
+import { KeyAuthGuard } from './guards/key-auth.guard';
 
 const routes: Routes = [
   {
@@ -16,7 +17,7 @@ const routes: Routes = [
       import('./modules/factures/factures.module').then(
         (m) => m.FacturesModule
       ),
-    canLoad: [],
+    canActivate: [KeyAuthGuard],
   },
   {
     path: '', // localhost:4200

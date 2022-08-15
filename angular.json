@@ -21,7 +21,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "localize": true,
+            "localize": false,
             "outputPath": "dist/second-one",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -32,6 +32,9 @@
             "scripts": []
           },
           "configurations": {
+            "en": {
+              "localize": ["en"]
+            },
             "production": {
               "budgets": [
                 {
@@ -72,6 +75,9 @@
             },
             "development": {
               "browserTarget": "second-one:build:development"
+            },
+            "en": {
+              "browserTarget": "second-one:build:development,en"
             }
           },
           "defaultConfiguration": "development"
