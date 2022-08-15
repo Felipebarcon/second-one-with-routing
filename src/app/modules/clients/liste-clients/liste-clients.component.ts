@@ -18,6 +18,9 @@ export class ListeClientsComponent implements OnInit {
 
   ShowFactures() {
     // window.location.assign("/factures") ou:
-    this.router.navigate(['/factures']);
+    // this.router.navigate(['/factures']); ou:
+    this.router
+      .navigateByUrl('/factures')
+      .catch((e) => this.router.navigateByUrl('/'));
   }
 }
