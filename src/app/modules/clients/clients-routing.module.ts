@@ -6,7 +6,7 @@ import { ListeClientsComponent } from './liste-clients/liste-clients.component';
 const routes: Routes = [
   {
     path: 'factures', // localhost:4200/factures
-    redirectTo: '/factures',
+    redirectTo: '/factures', // perte de la queryParams
     pathMatch: 'full',
   },
   {
